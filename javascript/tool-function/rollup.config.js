@@ -10,7 +10,7 @@ module.exports = {
     output: {
         format: 'umd',
         file: 'lib/tool-function.min.js',
-        name: 'js',
+        name: 'tool',
         // inlineDynamicImports: true // 支持动态导入文件（https://rollupjs.org/guide/en/#outputinlinedynamicimports）
     },
     plugins: [
