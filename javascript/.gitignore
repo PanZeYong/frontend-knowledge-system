@@ -1,0 +1,5 @@
+lib
+node_modules
+cert.pem
+key.pem
+script

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>前端工具函数</title>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but 前端工具函数 JSSDK doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app">
+  </div>
+  <script src="./tool-function.min.js"></script>
+
+  <script>
+    const { deepCopy, flattenObject } = tool
+    const obj = {
+      a: 1,
+      b: {
+        c: 2
+      },
+      d: [
+        {
+            e: 3
+        }
+      ]
+    }
+    const obj2 = deepCopy(obj)
+    obj2.b.c = 3
+    console.log(obj, obj2) // 2
+
+    console.log('--------flattenObject----------')
+    const user = {
+      name: 'panju',
+      age: '18',
+      address: {
+        city: 'beijing',
+        area: 'haidian'
+      },
+      hobby: {
+        sport: {
+          basketball: '篮球',
+          football: '足球'
+        },
+        music: {
+          pop: '流行',
+          rock: '摇滚'
+        }
+      },
+      friends: ['xiaoming', 'xiaohong', 'xiaoliang'],
+      houses: [
+        {
+          city: 'beijing',
+          area: 'haidian'
+        },
+        {
+          city: 'beijing',
+          area: 'chaoyang'
+        }
+      ]
+    }
+
+    console.log(flattenObject(user))
+
+  </script>
+
+</body>
+</html>

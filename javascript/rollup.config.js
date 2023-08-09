@@ -6,7 +6,7 @@ const cleanup = require('rollup-plugin-cleanup')
 const { terser } = require('rollup-plugin-terser')
 
 module.exports = {
-    input: 'src/index.js',
+    input: 'src/tool-function/index.js',
     output: {
         format: 'umd',
         file: 'lib/tool-function.min.js',
