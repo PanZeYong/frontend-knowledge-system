@@ -2,4 +2,5 @@
 
 ### throttle（节流函数）
 ### deepCopy（深拷贝）
-### flattenObject（扁平化对象）
+### flattenObject（对象扁平化）
+### flattenArray（数组扁平化）
