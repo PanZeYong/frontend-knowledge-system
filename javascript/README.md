@@ -4,3 +4,4 @@
 ### deepCopy（深拷贝）
 ### flattenObject（对象扁平化）
 ### flattenArray（数组扁平化）
+### instanceOf（instanceOf）
