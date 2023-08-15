@@ -5,7 +5,7 @@
  * @param {Object} right 构造函数或者父类型实例
  * @returns {boolean}
  */
-const instanceOf = (left, right) => {
+export const instanceOf = (left, right) => {
     right = right.prototype
     left = left.__proto__
 

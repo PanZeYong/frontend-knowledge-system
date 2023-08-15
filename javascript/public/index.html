@@ -18,7 +18,7 @@
   <script src="./tool-function.min.js"></script>
 
   <script>
-    const { deepCopy, flattenObject, flattenArray } = tool
+    const { deepCopy, flattenObject, flattenArray, apply } = tool
     const obj = {
       a: 1,
       b: {
@@ -70,6 +70,14 @@
     console.log('--------flattenArray----------')
     const arr = [1, [2, [3, [4, [ { a: 1, b: 2 }, [9, 8] ]]]]]
     console.log(flattenArray(arr))
+
+    const test = () => {
+      console.log('Test')
+    }
+
+    Function.prototype.apply = apply
+
+    test.apply()
 
   </script>
 
