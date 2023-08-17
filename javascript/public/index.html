@@ -18,7 +18,7 @@
   <script src="./tool-function.min.js"></script>
 
   <script>
-    const { deepCopy, flattenObject, flattenArray, apply } = tool
+    const { deepCopy, flattenObject, flattenArray, apply, call, bind } = tool
     const obj = {
       a: 1,
       b: {
@@ -72,12 +72,54 @@
     console.log(flattenArray(arr))
 
     const test = () => {
-      console.log('Test')
+      console.log(this.value, this)
+    }
+
+    function test1 () {
+      console.log(this.value)
     }
 
     Function.prototype.apply = apply
+    Function.prototype.call = call
+    Function.prototype.bind = bind
 
-    test.apply()
+    var value = 3
+
+    // test.apply()
+
+    // test1.call({ value: 2})
+
+    var x = 43
+
+    /**const module = {
+      x: 42,
+      getX: function () {
+        return this.x;
+      },
+    };
+    
+    const unboundGetX = module.getX;
+    console.log(unboundGetX()); // The function gets invoked at the global scope
+    // Expected output: undefined
+    
+    const boundGetX = unboundGetX.bindWithoutConstrcutor(module);
+    console.log(boundGetX());*/
+
+    function Point(x, y) {
+      this.x = x;
+      this.y = y;
+    }
+    
+    Point.prototype.toString = function () {
+      return this.x + "," + this.y;
+    };
+    
+    var p = new Point(1, 2);
+    p.toString(); // '1,2'
+    
+    var emptyObj = {};
+    var YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
+    new YAxisPoint()
 
   </script>
 

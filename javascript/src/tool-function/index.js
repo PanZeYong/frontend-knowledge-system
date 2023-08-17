@@ -5,8 +5,10 @@ import { flattenArray } from './flattenArray'
 import { instanceOf } from './instanceOf'
 import { newObj } from './newObj'
 import { apply } from './apply'
+import { call } from './call'
+import { bind } from './bind'
 
-export { throttle, deepCopy, flattenObject, flattenArray, instanceOf, newObj, apply };
+export { throttle, deepCopy, flattenObject, flattenArray, instanceOf, newObj, apply, call, bind };
 
 // const path = require('path')
 // const fs = require('fs')

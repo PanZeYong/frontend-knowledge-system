@@ -7,3 +7,5 @@
 ### instanceOf（instanceOf）
 ### newObj（模拟 new 实现）
 ### apply （模拟 apply 实现）
+### call （模拟 call 实现）
+### bind （模拟 bind 实现）
