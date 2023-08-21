@@ -9,3 +9,4 @@
 ### apply （模拟 apply 实现）
 ### call （模拟 call 实现）
 ### bind （模拟 bind 实现）
+### Object.create（模拟 Object.create 实现）

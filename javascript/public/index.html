@@ -18,7 +18,7 @@
   <script src="./tool-function.min.js"></script>
 
   <script>
-    const { deepCopy, flattenObject, flattenArray, apply, call, bind } = tool
+    const { deepCopy, flattenObject, flattenArray, apply, call, bind, createObj } = tool
     const obj = {
       a: 1,
       b: {
@@ -120,6 +120,9 @@
     var emptyObj = {};
     var YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
     new YAxisPoint()
+
+    const obj1 = { name: 'panju' }
+    console.log(createObj(null))
 
   </script>
 

@@ -7,8 +7,9 @@ import { newObj } from './newObj'
 import { apply } from './apply'
 import { call } from './call'
 import { bind } from './bind'
+import { createObj } from './createObj'
 
-export { throttle, deepCopy, flattenObject, flattenArray, instanceOf, newObj, apply, call, bind };
+export { throttle, deepCopy, flattenObject, flattenArray, instanceOf, newObj, apply, call, bind, createObj };
 
 // const path = require('path')
 // const fs = require('fs')

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup -c",
-    "dev:https": "http-server -S --cors -c -p 8080",
+    "dev:https": "http-server -S --cors -c -p 8081",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
